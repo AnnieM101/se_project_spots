@@ -1,0 +1,11 @@
+.menubar {
+  max-width: 1440px;
+  max-height: 46px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+.menubar__logo {
+  height: 26px;
+  width: 94px;
+}
