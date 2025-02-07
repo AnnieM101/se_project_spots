@@ -24,8 +24,11 @@
   color: #212121;
   margin: 0;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  line-clamp: 3;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .card__button-like {
   border: none;

@@ -25,8 +25,10 @@
   margin: 0;
   margin-bottom: 12px;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .profile__description {
   font-family: "Poppins", "Arial", sans-serif;
@@ -36,8 +38,10 @@
   margin: 0;
   color: #212121b2;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__button-edit-profile {

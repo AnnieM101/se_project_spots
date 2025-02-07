@@ -1,21 +1,17 @@
 # Project 3: Spots
 
-### Overview  
+# Description
+This project is a social media page called "Spots". The interface allows users to add images and captions for others to view. Currently the interface only allows social interaction via "liking" content posted.
 
-* Intro  
-* Figma  
-* Images  
+# Technologies and Techniques
+The project further explores the users hard coding skills with HTML and CSS. New techniques introduced include adding grid layouts, media queiries, and adapting a webpage to be responsive. 
 
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+Technologies used for the project include industry-standard softwares like Figma, GitBash, and VS code to take a UI/UX design and code it into a user-friendly interface. 
+
+# Pictures
+
+Figma Brief:
+![alt text](image.png)
+
+Media Queries:
+![alt text](image-1.png)
