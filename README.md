@@ -15,3 +15,10 @@ Figma Brief:
 
 Media Queries:
 ![alt text](image-1.png)
+
+# Link to Github Pages
+https://anniem101.github.io/se_project_spots/
+
+# Link to Video
+
+

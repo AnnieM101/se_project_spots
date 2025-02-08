@@ -7,7 +7,7 @@
   height: 413px;
   width: 413px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   display: block;
 }
 .card__content {
@@ -17,6 +17,7 @@
   margin-top: 12px;
 }
 .card__caption {
+  max-width: 413px;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   line-height: 24px;
@@ -24,6 +25,7 @@
   color: #212121;
   margin: 0;
   text-overflow: ellipsis;
+  white-space: no-wrap;
   line-clamp: 3;
   overflow: hidden;
   display: -webkit-box;
@@ -32,15 +34,15 @@
 }
 .card__button-like {
   border: none;
-  background-image: url(../images/Union.png);
+  background-image: url(../images/Union.svg);
   width: 23px;
   height: 20px;
   background-color: transparent;
   opacity: 40%;
+  cursor: pointer;
 }
 
 .card__button-like:hover {
-  color: #212121;
   opacity: 100%;
 }
 
@@ -56,5 +58,6 @@
   }
   .card__caption {
     font-size: 16px;
+    line-height: 16px;
   }
 }

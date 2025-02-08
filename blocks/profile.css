@@ -17,6 +17,7 @@
 }
 
 .profile__name {
+  max-width: fit-content;
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 32px;
   font-weight: 500;
@@ -31,6 +32,7 @@
   -webkit-box-orient: vertical;
 }
 .profile__description {
+  max-width: fit-content;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -49,16 +51,15 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  color: #212121;
   opacity: 70%;
   border: none;
   background-color: transparent;
   padding: 0;
   margin-top: auto;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .profile__button-edit-profile:hover {
-  color: #212121;
   opacity: 100%;
 }
 .profile__button-icon-pencil {
@@ -70,7 +71,7 @@
   color: #fcf5e5;
   height: 52px;
   width: 149px;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-top: 138px;
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 16px;
@@ -78,6 +79,7 @@
   font-weight: 500;
   border: none;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .profile__button-new-post:hover {
@@ -110,6 +112,7 @@
   }
   .profile__name {
     font-size: 20px;
+    line-height: 20px;
     margin: 0 0 6px;
   }
   .profile__description {
