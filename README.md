@@ -20,5 +20,5 @@ Media Queries:
 https://anniem101.github.io/se_project_spots/
 
 # Link to Video
-
+https://drive.google.com/file/d/1H8scETmQE6xfbHX22UKbIAXRO0nRXYaC/view?usp=drive_link
 
