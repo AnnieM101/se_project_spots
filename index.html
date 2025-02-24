@@ -50,74 +50,19 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                alt="Scenic View of Val Thorens"
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Val Thorens</h2>
-                <button class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="Scenic restaurant terrace"
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Restaurant terrace</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="Scenic outdoor cafe"
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">An outdoor cafe</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="A vast wood and metal suspension bridge over a forest"
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">
-                  A very long bridge, over the forest
-                </h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="A tunnel"
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Tunnel with morning light</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="An old wooden cabin covered in snow"
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Mountain house</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <img
+                  class="card__image"
+                  alt=""
+                  src=""
+                />
+                <div class="card__content">
+                  <h2 class="card__caption"></h2>
+                  <button class="card__like-button"></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -129,11 +74,11 @@
           <button type="submit" class="modal__close-button"></button>
           <h2 class="modal__title">Edit Profile</h2>
           <form name="edit-profile" class="modal__form">
-            <label class="modal__label" for="name">Name
-              <input id="name" type="text" class="modal__input" placeholder="Type your name">
+            <label class="modal__label" for="profile-name-input">Name
+              <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name">
             </label>
-            <label class="modal__label"  for="description">Description
-              <input id="description" type="text" class="modal__input" placeholder="Describe yourself">
+            <label class="modal__label"  for="profile-description-input">Description
+              <input id="profile-description-input" type="text" class="modal__input" placeholder="Describe yourself">
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
