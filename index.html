@@ -52,6 +52,7 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
+                <button type="button" class="card__delete-button"></button>
                 <img class="card__image" alt="" src="" />
                 <div class="card__content">
                   <h2 class="card__caption"></h2>
@@ -77,6 +78,8 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                name="name"
+                ;
                 required
               />
             </label>
@@ -87,11 +90,53 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+                name="description"
+                ;
                 required
               />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h2 class="modal__title">New post</h2>
+          <form name="add-card-form" class="modal__form">
+            <label class="modal__label" for="image-link-input"
+              >Image link
+              <input
+                id="image-link-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                name="link"
+                ;
+                required
+              />
+            </label>
+            <label class="modal__label" for="caption-input"
+              >Caption
+              <input
+                id="caption-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+                name="name"
+                ;
+                required
+              />
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_opened" id="preview__modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <img id="preview__img" src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg" alt="#" class="modal__img">
+          <p class="modal__caption"></p>
         </div>
       </div>
     </div>

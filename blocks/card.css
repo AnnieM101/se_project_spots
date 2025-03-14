@@ -42,6 +42,28 @@
   opacity: 100%;
 }
 
+.card__like-button_liked {
+  background-image: url(../images/Liked-icon.svg);
+  opacity: 100%;
+}
+
+.card__like-button_liked:hover {
+  background-image: url(../images/Liked-icon-hover.svg);
+}
+
+.card__delete-button {
+  background-image: url(../images/delete-button.svg);
+  height: 32px;
+  width: 32px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  margin: 10px 10px 371px 371px;
+}
+.card__delete-button:hover {
+  background-image: url(../images/Delete-hover.svg);
+}
+
 @media screen and (max-width: 627px) {
   .card {
     max-width: 288px;
