@@ -52,14 +52,6 @@ const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
 );
 
-const previewModal = document.querySelector("#preview-modal");
-
-const previewModalImageEl = previewModal.querySelector(".modal__image");
-
-const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
-
-const previewCloseButton = previewModal.querySelector(".modal__close-button_preview");
-
 const addModal = document.querySelector("#add-card-modal");
 
 const addModalCloseButton = addModal.querySelector(".modal__close-button");
@@ -74,6 +66,14 @@ const cardTemplate = document.querySelector("#card-template");
 
 const cardsList = document.querySelector(".cards__list");
 
+const previewModal = document.querySelector("#preview-modal");
+
+const previewModalImageEl = previewModal.querySelector(".modal__image");
+
+const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
+
+const previewCloseButton = previewModal.querySelector(".modal__close-button_preview");
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
 }
@@ -84,6 +84,8 @@ function closeModal(modal) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
+    profileName.textContent = editModalNameInput.value,
+    profileDescription.textContent = editModalDescriptionInput.value,
   closeModal(editModal);
 }
 
@@ -91,10 +93,12 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const inputValues = {
     name: cardCaptionInput.value,
-    link: cardCaptionInput.value,
+    link: cardImageInput.value,
   };
   const cardElement = getCardElement(inputValues);
-  cardsList.append(cardElement);
+  cardsList.prepend(cardElement);
+  cardCaptionInput.value="",
+  cardImageInput.value="",
   closeModal(addModal);
 }
 
@@ -143,8 +147,6 @@ function getCardElement(data) {
 }
 
 profileEditButton.addEventListener("click", () => {
-  editModalNameInput.value = profileName.textContent;
-  editModalDescriptionInput.value = profileDescription.textContent;
   openModal(editModal);
 });
 
