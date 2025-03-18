@@ -11,12 +11,13 @@
   align-items: center;
   padding: 0 16px;
   visibility: hidden;
-  opacity: 0.6;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
+  opacity: 0;
+  font-family: "Poppins", "Arial", sans-serif;
 }
 .modal_opened {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.3s linear;
 }
 .modal__container {
   max-width: 730px;
@@ -40,13 +41,13 @@
   max-height: 80vh;
   border-radius: 8px;
   position: relative;
+  cursor: pointer;
 }
 
 .modal__caption {
   background-color: rgba(33, 33, 33, 1);
   border-radius: 8px;
   color: #fff;
-  font-family: "Poppins", "Arial", sans-serif;
   font-size: 16px;
   line-height: 120%;
   font-weight: 500;
@@ -57,7 +58,6 @@
 
 .modal__title {
   font-weight: 500;
-  font-family: "Poppins", "Arial", sans-serif;
   font-size: 32px;
   line-height: 32px;
   margin: 0 0 32px;
@@ -89,6 +89,7 @@
   border: none;
   position: absolute;
   margin-left: 12.6px;
+  cursor: pointer;
 }
 
 .modal__close-button_preview:hover {
