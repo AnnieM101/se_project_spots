@@ -11,12 +11,13 @@
   align-items: center;
   padding: 0 16px;
   visibility: hidden;
-  transition: visibility 0.3s, opacity 0.3s ease-in;
+  transition: visibility 0.3s, opacity 0.3s ease-in; /*Transition applied as requested*/
   opacity: 0;
   font-family: "Poppins", "Arial", sans-serif;
 }
 .modal_opened {
   visibility: visible;
+  transition: visibility 0.3s, opacity 0.3s ease-in; /*Transition applied as requested*/
   opacity: 1;
 }
 .modal__container {
@@ -41,7 +42,7 @@
   max-height: 80vh;
   border-radius: 8px;
   position: relative;
-  cursor: pointer;
+  cursor: pointer; /* Applied as requested*/
 }
 
 .modal__caption {
@@ -70,7 +71,7 @@
   opacity: 40%;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
+  cursor: pointer; /* Applied as requested*/
   position: absolute;
   top: 32px;
   right: 50px;
@@ -89,7 +90,7 @@
   border: none;
   position: absolute;
   margin-left: 12.6px;
-  cursor: pointer;
+  cursor: pointer; /* Applied as requested*/
 }
 
 .modal__close-button_preview:hover {

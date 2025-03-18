@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
       content="Spots is a social media platform where users can share photos."
-    />
-    <meta name="author" content="Anna Matos" />
+    >
+    <meta name="author" content="Anna Matos">
     <meta
       name="keywords"
       content="HTML, CSS, Imagery, Photos, Bessie Coleman"
-    />
-    <link rel="stylesheet" href="pages/index.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    >
+    <link rel="stylesheet" href="pages/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots Logo" class="header__logo" />
+        <img src="./images/logo.svg" alt="Spots Logo" class="header__logo">
       </header>
       <main class="content">
         <section class="page__section profile">
@@ -27,7 +27,7 @@
             src="./images/avatar.jpg"
             alt="Bessie Coleman Avatar"
             class="profile__image"
-          />
+          >
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -36,7 +36,7 @@
                 src="./images/pencil_icon.svg"
                 alt="edit profile logo"
                 class="profile__pencil-icon"
-              />
+              >
               Edit Profile
             </button>
           </div>
@@ -45,7 +45,7 @@
               class="profile__plus-icon"
               alt="new post icon"
               src="./images/plus_icon.svg"
-            />New Post
+            >New Post
           </button>
         </section>
         <section class="cards page__section">
@@ -53,7 +53,7 @@
             <template id="card-template">
               <li class="card">
                 <button type="button" class="card__delete-button"></button>
-                <img class="card__image" alt="" src="" />
+                <img class="card__image" alt="" src="">
                 <div class="card__content">
                   <h2 class="card__caption"></h2>
                   <button type="button" class="card__like-button"></button>
@@ -79,7 +79,6 @@
                 class="modal__input"
                 placeholder="Type your name"
                 name="name"
-                ;
                 required
               />
             </label>
@@ -91,7 +90,6 @@
                 class="modal__input"
                 placeholder="Describe yourself"
                 name="description"
-                ;
                 required
               />
             </label>
@@ -112,7 +110,6 @@
                 class="modal__input"
                 placeholder="Paste a link to the picture"
                 name="link"
-                ;
                 required
               />
             </label>
@@ -124,7 +121,6 @@
                 class="modal__input"
                 placeholder="Type your caption"
                 name="name"
-                ;
                 required
               />
             </label>
@@ -134,13 +130,7 @@
       </div>
       <div class="modal" id="preview-modal">
         <div class="modal__container modal__container_type_preview">
-
-          <img
-            class="modal__image"
-            id="preview__image"
-            src=""
-            alt="#"
-          />
+          <img class="modal__image" id="preview__image" src="#" alt="#" />
           <button type="button" class="modal__close-button_preview"></button>
           <p class="modal__caption"></p>
         </div>
