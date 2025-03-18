@@ -143,6 +143,8 @@ previewCloseButton.addEventListener("click", () => {
 });
 
 profileEditButton.addEventListener("click", () => {
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
   openModal(editModal);
 });
 
