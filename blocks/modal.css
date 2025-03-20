@@ -71,7 +71,7 @@
   opacity: 40%;
   border: none;
   border-radius: 8px;
-  cursor: pointer; /* Applied as requested*/
+  cursor: pointer;
   position: absolute;
   top: 32px;
   right: 50px;
@@ -90,7 +90,9 @@
   border: none;
   position: absolute;
   margin-left: 12.6px;
-  cursor: pointer; /* Applied as requested*/
+  cursor: pointer;
+  top: 5px;
+  right: -50px;
 }
 
 .modal__close-button_preview:hover {
