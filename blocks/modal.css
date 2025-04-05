@@ -11,13 +11,13 @@
   align-items: center;
   padding: 0 16px;
   visibility: hidden;
-  transition: visibility 0.3s, opacity 0.3s ease-in; /*Transition applied as requested*/
+  transition: visibility 0.3s, opacity 0.3s ease-in;
   opacity: 0;
   font-family: "Poppins", "Arial", sans-serif;
 }
 .modal_opened {
   visibility: visible;
-  transition: visibility 0.3s, opacity 0.3s ease-in; /*Transition applied as requested*/
+  transition: visibility 0.3s, opacity 0.3s ease-in;
   opacity: 1;
 }
 .modal__container {
@@ -42,7 +42,7 @@
   max-height: 80vh;
   border-radius: 8px;
   position: relative;
-  cursor: pointer; /* Applied as requested*/
+  cursor: pointer;
 }
 
 .modal__caption {
@@ -112,6 +112,13 @@
   cursor: pointer;
   border: none;
 }
+
+.modal__submit-button_disabled{
+  background-color: rgba(33, 33, 33, 1);
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
 .modal__label {
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
@@ -121,6 +128,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 32px;
 }
 .modal__input {
   height: 52px;
@@ -130,7 +138,6 @@
   gap: 32px;
   border: 1px solid rgba(33, 33, 33, 0.4);
   cursor: pointer;
-  margin-bottom: 32px;
   padding: 16px 12px;
   font-size: 20px;
   line-height: 20px;
@@ -139,6 +146,20 @@
 
 .modal__input:hover {
   border-color: rgba(33, 33, 33, 1);
+}
+
+.modal__input_state_error{
+  border: 1px solid rgba(255,0,0,0.7);
+}
+
+.modal__error {
+  display: block;
+  margin: 8px auto 0 0;
+  color: rgba(255,0,0,0.7);
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0;
 }
 
 @media screen and (max-width: 627px) {
@@ -181,5 +202,13 @@
   }
   .modal__image {
     max-width: 288px;
+  }
+
+  .modal__error{
+    margin: 8px 0 0 0;
+  }
+
+  .modal__input_state_error{
+    margin: 0;
   }
 }

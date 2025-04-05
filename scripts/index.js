@@ -74,9 +74,16 @@ const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
 const previewCloseButton = previewModal.querySelector(
   ".modal__close-button_preview"
 );
+const cardSubmitButton = addModal.querySelector(".modal__submit-button");
+
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  const form = modal.querySelector('.modal__form');
+  if (form) {
+    const inputs = Array.from(form.querySelectorAll('.modal__input'));
+    resetValidation(form, inputs);
+  }
 }
 
 function closeModal(modal) {
@@ -100,6 +107,7 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardElement);
   cardCaptionInput.value = "";
   cardImageInput.value = "";
+  disableButton(cardSubmitButton);
   closeModal(addModal);
 }
 
@@ -145,6 +153,7 @@ previewCloseButton.addEventListener("click", () => {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editFormElement,[editModalNameInput, editModalDescriptionInput]);
   openModal(editModal);
 });
 
