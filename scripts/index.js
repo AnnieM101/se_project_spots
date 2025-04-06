@@ -31,6 +31,8 @@ const initialCards = [
   },
 ];
 
+const openedPopup = document.querySelector(".modal_opened");
+
 const addCardButton = document.querySelector(".profile__add-button");
 
 const profileEditButton = document.querySelector(".profile__edit-button");
@@ -79,15 +81,12 @@ const cardSubmitButton = addModal.querySelector(".modal__submit-button");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  const form = modal.querySelector('.modal__form');
-  if (form) {
-    const inputs = Array.from(form.querySelectorAll('.modal__input'));
-    resetValidation(form, inputs);
-  }
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
 
 function handleEditFormSubmit(evt) {
@@ -105,9 +104,9 @@ function handleAddCardSubmit(evt) {
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  cardCaptionInput.value = "";
-  cardImageInput.value = "";
-  disableButton(cardSubmitButton);
+  cardCaptionInput.value = evt.target.reset();
+  cardImageInput.value = evt.target.reset();
+  disableButton(cardSubmitButton, config);
   closeModal(addModal);
 }
 
@@ -153,7 +152,7 @@ previewCloseButton.addEventListener("click", () => {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editFormElement,[editModalNameInput, editModalDescriptionInput]);
+  resetValidation(editFormElement,[editModalNameInput, editModalDescriptionInput], config);
   openModal(editModal);
 });
 
@@ -177,4 +176,17 @@ initialCards.forEach((item) => {
   console.log(item);
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
+});
+
+function handleEscClose(evt) {
+  if (evt.key.toLowerCase() === "escape") {
+    const targetModal = document.querySelector(".modal_opened");
+    closeModal(targetModal);
+  }
+}
+
+document.addEventListener("click", function(evt) {
+  if (evt.target.classList.contains("modal") && evt.target.classList.contains("modal_opened")){
+    closeModal(evt.target);
+   }
 });
