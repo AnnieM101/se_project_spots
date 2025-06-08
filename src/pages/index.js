@@ -1,3 +1,5 @@
+import "./index.css";
+import { enableValidation, config, resetValidation, disableButton } from "../scripts/validation";
 const initialCards = [
   {
     name: "Val Thorens",
