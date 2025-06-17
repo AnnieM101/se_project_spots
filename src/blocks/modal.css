@@ -37,6 +37,11 @@
   width: auto;
 }
 
+.modal__delete{
+  display: flex;
+  justify-content: center;
+}
+
 .modal__image {
   max-width: 80vw;
   max-height: 80vh;
@@ -64,6 +69,17 @@
   margin: 0 0 32px;
   color: rgba(33, 33, 33, 1);
 }
+
+.modal__title_delete{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 0 32px;
+  color: rgba(33, 33, 33, 1);
+  text-align: center;
+}
+
+
 .modal__close-button {
   height: 40px;
   width: 40px;
@@ -83,6 +99,19 @@
 }
 
 .modal__close-button_preview {
+  background-image: url(../images/close-light.svg);
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  margin-left: 12.6px;
+  cursor: pointer;
+  top: 5px;
+  right: -50px;
+}
+
+.modal__close-button_delete {
   background-image: url(../images/close-light.svg);
   height: 40px;
   width: 40px;
@@ -117,6 +146,36 @@
   background-color: rgba(33, 33, 33, 1);
   opacity: 50%;
   cursor: not-allowed;
+}
+
+.modal__delete-button{
+  height: 52px;
+  width: 156px;
+  margin-right: 20px;
+  background-color: rgba(255, 101, 101, 1);
+  border-radius: 8px;
+  color: rgba(33, 33, 33, 1);
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+  border: none;
+  padding: 0px;
+}
+
+.modal__cancel-button{
+    height: 52px;
+  width: 156px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  color: rgba(33, 33, 33, 1);
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+  border: solid 1px;
 }
 
 .modal__label {
@@ -169,13 +228,30 @@
   .modal__container {
     padding: 12px;
   }
+
+  .modal__delete{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal__delete-button{
+    margin-right: 0px;
+    margin-bottom: 12px;
+    padding: 0px;
+  }
   .modal__title {
     font-size: 20px;
     line-height: 20px;
     margin: 10px 0 34px;
   }
+
+  .modal__title_delete{
+    font-size: 20px;
+  }
+
   .modal__label {
     line-height: 16px;
+    margin: 0;
   }
   .modal__submit-button {
     width: 100%;
@@ -187,6 +263,7 @@
     line-height: 16px;
     margin-bottom: 24px;
     padding-left: 12px;
+    margin: 0;
   }
   .modal__close-button {
     top: 12px;
@@ -195,6 +272,13 @@
 
   .modal__close-button_preview {
     top: -40px;
+    right: 4px;
+    padding: 0;
+    margin: 0;
+    background-position: center;
+  }
+   .modal__close-button_delete {
+    top: -56px;
     right: 4px;
     padding: 0;
     margin: 0;
