@@ -47,24 +47,6 @@ const api = new Api({
   },
 });
 
-api
-  .getAppInfo()
-  .then(([cards, userInfo]) => {
-    console.log(cards, userInfo);
-    profileName.textContent = userInfo.name;
-    profileDescription.textContent = userInfo.about;
-    cards.forEach((card) => {
-      const cardElement = getCardElement({
-        name: card.name,
-        link: card.link,
-        alt: card.alt,
-        isLiked: card.isLiked,
-        _id: card._id,
-      });
-      cardsList.append(cardElement);
-    });
-  })
-  .catch(console.error);
 
 //Profile Elements
 const addCardButton = document.querySelector(".profile__add-button");
@@ -74,6 +56,8 @@ const profileEditButton = document.querySelector(".profile__edit-button");
 const profileName = document.querySelector(".profile__name");
 
 const profileDescription = document.querySelector(".profile__description");
+
+const profileAvatar = document.querySelector(".profile__image");
 
 //Edit Elements
 const editFormElement = document.querySelector(".modal__form");
@@ -143,6 +127,27 @@ const deleteModalCloseButton = deleteModal.querySelector(
 //Cancel Element
 const cancelButton = document.querySelector(".modal__cancel-button");
 
+api
+  .getAppInfo()
+  .then(([cards, userInfo]) => {
+    console.log(cards, userInfo);
+    profileName.textContent = userInfo.name;
+    profileDescription.textContent = userInfo.about;
+    profileAvatar.src = userInfo.avatar;
+    cards.forEach((card) => {
+      const cardElement = getCardElement({
+        name: card.name,
+        link: card.link,
+        alt: card.alt,
+        isLiked: card.isLiked,
+        _id: card._id,
+      });
+      cardsList.append(cardElement);
+    });
+  })
+  .catch(console.error);
+
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscClose);
@@ -164,6 +169,7 @@ api
     profileImage.src = data.avatar;
     closeModal(avatarModal);
     evt.target.reset();
+    disableButton(submitButton, config);
   })
   .catch(console.error)
   .finally(() => {
@@ -273,14 +279,15 @@ function getCardElement(data) {
 cardLikeButton.addEventListener("click", (evt) => {
     handleLike(evt, data._id);
   });
-
+  if (data.isLiked) {
+    cardLikeButton.classList.add("card__like-button_liked");
+  };
   cardImage.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
     previewModalCaptionEl.textContent = data.name;
     previewModalImageEl.alt = data.name;
   });
-  console.log(data);
   return cardElement;
 }
 
